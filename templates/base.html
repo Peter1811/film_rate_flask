@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    {% block mainmenu %}
+    <ul>
+        {% for point in main_menu %}
+        <li><a href={{ main_menu[point] }}>{{ point }}</a></li>
+        {% endfor %}
+    </ul>
+    {% endblock %}
+    {% block content %}
+    {% endblock %}
+</body>
+</html>
