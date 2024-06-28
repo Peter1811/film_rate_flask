@@ -1,6 +1,11 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1>Film adding</h1>
-<p>Here you can add films to your personal library</p>
+<form action="/add-film" method="post" class="form-film-adding">
+    <p><label class="form-label">Film name: </label> <input type="text" name="film_name" value="" required />
+    <p><label class="form-label">Director: </label> <input type="text" name="film_director" value="" />
+    <p><label class="form-label">Short description: </label> 
+    <p><textarea name="description" rows=7 cols=40></textarea>
+    <p><input class="form-send-button" type="submit" value="Sent">
+</form>
 {% endblock content %}
