@@ -2,7 +2,7 @@ from flask import Flask, render_template, url_for
 
 app = Flask(__name__)
 
-main_menu = {'Add film': '/add-film', 'Get the List of film': '/films-library', 'About': '/about'}
+main_menu = {'Main page': 'main_page', 'Add film': 'add_film', 'Get the list of film': 'get_films'}
 
 
 @app.route('/')
@@ -24,6 +24,10 @@ def get_films():
 @app.route('/about')
 def about():
     return render_template('about.html', main_menu=main_menu)
+
+@app.errorhandler(404)
+def page_not_found(error):
+    return render_template('404.html', main_menu=main_menu)
 
 
 if __name__ == '__main__':

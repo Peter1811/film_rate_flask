@@ -1,17 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Document</title>
+    <title>Films rating app</title>
+    <link type="text/css" href="{{ url_for('static', filename='css/styles.css')}}" rel="stylesheet" />
 </head>
 <body>
     {% block mainmenu %}
-    <ul>
+    <div class="main_menu_list">
+    <ul class="main_menu">
         {% for point in main_menu %}
-        <li><a href={{ main_menu[point] }}>{{ point }}</a></li>
+        <li><a href="{{ url_for(main_menu[point]) }}" class="list_point">{{ point }}</a></li>
         {% endfor %}
     </ul>
+</div>
     {% endblock %}
     {% block content %}
     {% endblock %}
+
 </body>
 </html>
