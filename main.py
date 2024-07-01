@@ -9,6 +9,7 @@ app.add_url_rule('/add-film', view_func=views.add_film, methods=['GET', 'POST'])
 app.add_url_rule('/films-library', view_func=views.get_films)
 
 app.register_error_handler(404, views.get_page_not_found_page)
+app.register_error_handler(500, views.get_internal_server_error_page)
 
 if __name__ == '__main__':
     app.run(debug=True)
