@@ -2,4 +2,17 @@
 
 {% block content %}
 <h1>List of films</h1>
+{% if films %}
+<ul>
+{% for film in films %}
+<li>
+<h2>{{ film[1] }}</h2>
+<p>Genre: {{ film[-1] }}</p>
+<p>Director: {{ film[2] }}</p>
+<p>{{ film[3] }}</p>
+{% endfor %}
+</ul>
+{% else %}
+<h2>There are no added films yet</h2>
+{% endif %}
 {% endblock content %}

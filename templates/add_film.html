@@ -1,9 +1,17 @@
 {% extends "base.html" %}
 
 {% block content %}
+<h1>Here you can add your film. Type it's name, director, and provide short description</h1>
 <form action="/add-film" method="post" class="form-film-adding">
     <p><label class="form-label">Film name: </label> <input type="text" name="film_name" value="" required />
     <p><label class="form-label">Director: </label> <input type="text" name="film_director" value="" />
+    <p>
+        <label class="form-label">Film genre: </label>
+        {% for genre in genres %}
+            <input type="radio" id="{{ genre }}" name="genre" value="{{ genre }}">
+            <label for="{{ genre }}" >{{ genre }}
+        {% endfor %}
+    </p>
     <p><label class="form-label">Short description: </label> 
     <p><textarea name="description" rows=7 cols=40></textarea>
     <p><input class="form-send-button" type="submit" value="Sent">

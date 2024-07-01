@@ -2,10 +2,6 @@ body {
     margin: 0;
 }
 
-/* html {
-    background-color: aqua;
-} */
-
 .form-film-adding {
     margin: 0 0 0 10px;
 }
@@ -20,6 +16,11 @@ body {
 }
 
 
+a, h1, h2, p, ul {
+    font-family: 'Arial';
+    font-size: 25px;
+}
+
 a {
     text-decoration: none;
 }
@@ -27,6 +28,14 @@ a {
 h1 {
     display: flex;
     justify-content: center;
+}
+
+h2 {
+    margin-left: 50px;
+}
+
+p {
+    margin-left: 15px;
 }
 
 .main_menu_list {
@@ -51,12 +60,8 @@ h1 {
     margin-right: 0;
 }
 
-.form-label {
+.form-label, .form-send-button {
     color: black;
-}
-
-.form-send-button {
-    color: black;   
 }
 
 .form-film-adding label {
@@ -67,4 +72,8 @@ h1 {
 .form-film-adding input, textarea {
     font-size: 25px;
     font-family: 'Arial';
+}
+
+p .for-genre {
+    margin-right: 100px;
 }
